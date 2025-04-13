@@ -1,13 +1,8 @@
 #include <iostream>
 #include <iterator>
 #include <stdexcept>
-#include "version.h"
 
 using namespace std;
-
-int version() {
-	return PROJECT_VERSION_PATCH;
-}
 
 // Пользовательский шаблон класса контейнера
 template <class T, class Allocator = allocator<T>> 

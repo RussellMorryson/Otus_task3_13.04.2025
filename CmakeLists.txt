@@ -10,7 +10,7 @@ option(WITH_BOOST_TEST "Whether to build Boost test" ON)
 configure_file(version.h.in version.h)
 
 add_executable(task_3_cli main.cpp)
-add_library(task_3 ip_functions.cpp)
+add_library(task_3 my_container.cpp)
 
 set_target_properties(task_3_cli task_3 PROPERTIES
     CXX_STANDARD 14

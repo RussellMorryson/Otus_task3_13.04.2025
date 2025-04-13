@@ -16,10 +16,10 @@ jobs:
       #- run: sudo apt-get update && sudo apt-get install libboost-test-dev -y
       - run: mkdir Otus_task3_13.04.2025
       - run: cd Otus_task3_13.04.2025
-      - run: cmake . -DPATCH_VERSION=${{ github.run_number }} #-DWITH_BOOST_TEST=ON
-      - run: cmake --build .
-      - run: cmake --build . --target test
-      - run: cmake --build . --target package
+      - run: cmake .. -DPATCH_VERSION=${{ github.run_number }} #-DWITH_BOOST_TEST=ON
+      - run: cmake --build ..
+      - run: cmake --build .. --target test
+      - run: cmake --build .. --target package
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1

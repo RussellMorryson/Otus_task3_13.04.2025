@@ -14,7 +14,7 @@ jobs:
         with:
           submodules: true
       #- run: sudo apt-get update && sudo apt-get install libboost-test-dev -y
-      - run: cmake mkdir Otus_task3_13.04.2025
+      - run: mkdir Otus_task3_13.04.2025
       - run: cd Otus_task3_13.04.2025
       - run: cmake . -DPATCH_VERSION=${{ github.run_number }} #-DWITH_BOOST_TEST=ON
       - run: cmake --build .

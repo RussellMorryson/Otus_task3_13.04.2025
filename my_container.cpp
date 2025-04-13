@@ -1,6 +1,7 @@
 #include <iostream>
 #include <iterator>
 #include <stdexcept>
+#include "version.h"
 
 using namespace std;
 

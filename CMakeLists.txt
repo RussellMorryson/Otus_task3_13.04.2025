@@ -45,32 +45,32 @@ target_link_libraries(task_3_cli PRIVATE
 #     )
 # endif()
 
-if (MSVC)
-    target_compile_options(task_3_cli PRIVATE
-        /W4
-    )
-    target_compile_options(task_3 PRIVATE
-        /W4
-    )
+# if (MSVC)
+#     target_compile_options(task_3_cli PRIVATE
+#         /W4
+#     )
+#     target_compile_options(task_3 PRIVATE
+#         /W4
+#     )
 
-    # if(WITH_BOOST_TEST)
-    #     target_compile_options(test_version PRIVATE
-    #         /W4
-    #     )
-    # endif()
-else ()
-    target_compile_options(task_3_cli PRIVATE
-        -Wall -Wextra -pedantic -Werror
-    )
-    target_compile_options(task_3 PRIVATE
-        -Wall -Wextra -pedantic -Werror
-    )
-    # if(WITH_BOOST_TEST)
-    #     target_compile_options(test_version PRIVATE
-    #         -Wall -Wextra -pedantic -Werror
-    #     )
-    # endif()
-endif()
+#     # if(WITH_BOOST_TEST)
+#     #     target_compile_options(test_version PRIVATE
+#     #         /W4
+#     #     )
+#     # endif()
+# else ()
+#     target_compile_options(task_3_cli PRIVATE
+#         -Wall -Wextra -pedantic -Werror
+#     )
+#     target_compile_options(task_3 PRIVATE
+#         -Wall -Wextra -pedantic -Werror
+#     )
+#     # if(WITH_BOOST_TEST)
+#     #     target_compile_options(test_version PRIVATE
+#     #         -Wall -Wextra -pedantic -Werror
+#     #     )
+#     # endif()
+# endif()
 
 install(TARGETS task_3_cli RUNTIME DESTINATION bin)
 
